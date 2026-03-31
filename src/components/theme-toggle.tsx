@@ -1,39 +1,33 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Moon, Sun } from "lucide-react";
-import styles from "./theme-toggle.module.css";
-
-type Theme = "light" | "dark";
+import { Sun, Moon } from "lucide-react";
 
 export function ThemeToggle() {
-  const [theme, setTheme] = useState<Theme>("light");
+  const [theme, setTheme] = useState<"light" | "dark">("light");
 
   useEffect(() => {
-    const stored = window.localStorage.getItem("theme") as Theme | null;
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    const next: Theme = stored ?? (prefersDark ? "dark" : "light");
-    setTheme(next);
-    document.documentElement.setAttribute("data-theme", next);
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "dark") {
+      setTheme("dark");
+      document.documentElement.setAttribute("data-theme", "dark");
+    }
   }, []);
 
-  const toggle = () => {
-    const next: Theme = theme === "light" ? "dark" : "light";
-    setTheme(next);
-    document.documentElement.setAttribute("data-theme", next);
-    window.localStorage.setItem("theme", next);
+  const toggleTheme = () => {
+    const newTheme = theme === "light" ? "dark" : "light";
+    setTheme(newTheme);
+    document.documentElement.setAttribute("data-theme", newTheme);
+    localStorage.setItem("theme", newTheme);
   };
 
   return (
     <button
-      type="button"
-      className={styles.toggle}
-      onClick={toggle}
-      aria-label={theme === "light" ? "Switch to dark mode" : "Switch to light mode"}
-      aria-pressed={theme === "dark"}
+      onClick={toggleTheme}
+      className="fixed bottom-6 right-6 z-50 flex h-10 w-10 items-center justify-center rounded-full border border-[var(--surface-border)] bg-[var(--surface)] text-[var(--foreground)] shadow-lg transition-transform hover:scale-110 active:scale-95"
+      aria-label="Toggle theme"
     >
-      {theme === "light" ? <Moon size={16} strokeWidth={1.75} /> : <Sun size={16} strokeWidth={1.75} />}
-      <span>{theme === "light" ? "Dark" : "Light"}</span>
+      {theme === "light" ? <Moon size={18} /> : <Sun size={18} />}
     </button>
   );
 }

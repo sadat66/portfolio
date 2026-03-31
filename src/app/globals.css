@@ -1,13 +1,18 @@
+@import "tailwindcss";
+
 /* Light theme (default): cream / white / gray + one accent */
 :root {
   --background: #f5f3ed;
   --foreground: #1c1c1c;
   --muted: #6a6a6a;
   --accent: #5c6b7a;
+  --accent-soft: color-mix(in srgb, var(--accent) 12%, transparent);
+  --accent-glow: color-mix(in srgb, var(--accent) 18%, var(--background));
   --surface: #fffdf9;
   --surface-border: #e0dbd2;
-  --gradient-orb-a: rgba(92, 107, 122, 0.08);
-  --gradient-orb-b: rgba(200, 192, 176, 0.12);
+  --gradient-orb-a: rgba(92, 107, 122, 0.11);
+  --gradient-orb-b: rgba(200, 192, 176, 0.14);
+  --gradient-orb-accent: rgba(92, 107, 122, 0.06);
 }
 
 html[data-theme="dark"] {
@@ -15,10 +20,13 @@ html[data-theme="dark"] {
   --foreground: #ececec;
   --muted: #9a9a9a;
   --accent: #a8b8c8;
+  --accent-soft: color-mix(in srgb, var(--accent) 14%, transparent);
+  --accent-glow: color-mix(in srgb, var(--accent) 12%, var(--background));
   --surface: #1e1e1e;
   --surface-border: #353535;
-  --gradient-orb-a: rgba(168, 184, 200, 0.06);
-  --gradient-orb-b: rgba(80, 80, 80, 0.08);
+  --gradient-orb-a: rgba(168, 184, 200, 0.08);
+  --gradient-orb-b: rgba(80, 80, 80, 0.1);
+  --gradient-orb-accent: rgba(168, 184, 200, 0.05);
 }
 
 html,
@@ -52,34 +60,8 @@ a {
   pointer-events: none;
   background:
     radial-gradient(ellipse 80% 50% at 15% 10%, var(--gradient-orb-a), transparent 55%),
-    radial-gradient(ellipse 70% 45% at 85% 90%, var(--gradient-orb-b), transparent 50%);
-}
-
-.glass-card {
-  background: var(--surface);
-  border: 1px solid var(--surface-border);
-  border-radius: 14px;
-  padding: 2rem;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-.glass-card:hover {
-  border-color: color-mix(in srgb, var(--accent) 35%, var(--surface-border));
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.05);
-}
-
-html[data-theme="dark"] .glass-card:hover {
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
-}
-
-.container {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
-}
-
-.section {
-  padding: 5rem 0;
+    radial-gradient(ellipse 70% 45% at 85% 90%, var(--gradient-orb-b), transparent 50%),
+    radial-gradient(ellipse 55% 40% at 50% 45%, var(--gradient-orb-accent), transparent 60%);
 }
 
 ::selection {

@@ -1,11 +1,11 @@
 # 👋 Hi, I'm Imteaz Sadat Hossain
 
-I'm a Full-Stack Software Developer dedicated to building digital experiences that are not only functional but also fast, secure, and visually stunning. My philosophy is rooted in performance and minimalism—I believe that great software should be as invisible as it is useful.
+I'm a Full-Stack Software Developer dedicated to building digital experiences that are not only functional but also fast, secure, and visually stunning. Beyond code, I specialize in high-fidelity documentation and cross-functional communication, bridging the gap between engineering and business stakeholders with clarity and precision.
 
 ## 🚀 My Approach
-- **Performance First**: I prioritize core web vitals and lightweight architecture over bulk. This portfolio represents that—zero-runtime styling overhead and optimized assets.
-- **Secure by Design**: I keep a close watch on the ecosystem. For instance, I've moved away from libraries like Axios in favor of native, highly-optimized standard fetch APIs to ensure the highest level of security and performance.
-- **Fluid UI/UX**: I use motion not just for flair, but to provide intuitive feedback to the user. Every transition is designed to feel natural and responsive.
+- **Technical/Business Bridge**: I translate complex engineering architecture into clear business value. My strong documentation skills ensure that everyone from developers to CEOs is aligned.
+- **Strategic Communication**: Fluent in English and experienced in stakeholder management, I thrive in environments requiring confident presentation and collaborative problem-solving.
+- **Performance & Security**: I prioritize core web vitals and secure architecture—opting for native standards like the Fetch API to keep deployments lean and robust.
 
 ## 🛠 What I Build With
 I specialize in the modern web stack, specifically:
