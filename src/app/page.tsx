@@ -126,7 +126,7 @@ export default function Home() {
             <p style={{ color: 'var(--muted)', marginBottom: '2.5rem', fontSize: '1.1rem', lineHeight: '1.6' }}>
               I&apos;m always open to discussing web application projects, architecture discussions, or professional opportunities.
             </p>
-            <a href="mailto:hello@example.com" className={styles.contactCTA}>
+            <a href="mailto:imteazsadat3@gmail.com" className={styles.contactCTA}>
               <Mail size={20} /> Reach Out via Email
             </a>
           </motion.div>
