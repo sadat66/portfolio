@@ -1,20 +1,35 @@
+/* Light theme (default): cream / white / gray + one accent */
 :root {
-  --background: #02040a;
-  --foreground: #f0f6fc;
-  --muted: #8b949e;
-  --accent: #58a6ff; 
-  --surface: rgba(255, 255, 255, 0.03);
-  --surface-border: rgba(255, 255, 255, 0.08);
+  --background: #f5f3ed;
+  --foreground: #1c1c1c;
+  --muted: #6a6a6a;
+  --accent: #5c6b7a;
+  --surface: #fffdf9;
+  --surface-border: #e0dbd2;
+  --gradient-orb-a: rgba(92, 107, 122, 0.08);
+  --gradient-orb-b: rgba(200, 192, 176, 0.12);
 }
 
-html, body {
+html[data-theme="dark"] {
+  --background: #161616;
+  --foreground: #ececec;
+  --muted: #9a9a9a;
+  --accent: #a8b8c8;
+  --surface: #1e1e1e;
+  --surface-border: #353535;
+  --gradient-orb-a: rgba(168, 184, 200, 0.06);
+  --gradient-orb-b: rgba(80, 80, 80, 0.08);
+}
+
+html,
+body {
   max-width: 100vw;
   overflow-x: hidden;
-  background-color: var(--background);
-  color: var(--foreground);
   margin: 0;
   padding: 0;
-  font-family: var(--font-inter), sans-serif;
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), system-ui, sans-serif;
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -29,48 +44,45 @@ a {
   box-sizing: border-box;
 }
 
-/* Dynamic sleek background gradients */
+/* Subtle background — no loud color bands */
 .bg-gradient {
   position: fixed;
-  top: 0; 
-  left: 0; 
-  width: 100vw; 
-  height: 100vh;
+  inset: 0;
   z-index: -1;
-  background: 
-    radial-gradient(circle at 10% 20%, rgba(20, 40, 80, 0.25), transparent 50%),
-    radial-gradient(circle at 90% 80%, rgba(10, 30, 60, 0.25), transparent 50%);
-  filter: blur(60px);
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 80% 50% at 15% 10%, var(--gradient-orb-a), transparent 55%),
+    radial-gradient(ellipse 70% 45% at 85% 90%, var(--gradient-orb-b), transparent 50%);
 }
 
 .glass-card {
   background: var(--surface);
   border: 1px solid var(--surface-border);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border-radius: 16px;
+  border-radius: 14px;
   padding: 2rem;
-  transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .glass-card:hover {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(255, 255, 255, 0.15);
-  transform: translateY(-4px);
+  border-color: color-mix(in srgb, var(--accent) 35%, var(--surface-border));
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.05);
+}
+
+html[data-theme="dark"] .glass-card:hover {
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
 }
 
 .container {
-  max-width: 1000px;
+  max-width: 960px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 1.5rem;
 }
 
 .section {
-  padding: 6rem 0;
+  padding: 5rem 0;
 }
 
-/* Custom Selection */
 ::selection {
   background: var(--accent);
-  color: #fff;
+  color: var(--background);
 }

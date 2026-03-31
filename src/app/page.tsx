@@ -47,27 +47,27 @@ export default function Home() {
             </motion.a>
           </motion.div>
           
-          <motion.div 
-             initial={{ opacity: 0, y: -20 }}
-             animate={{ opacity: 1, y: 0 }}
-             transition={{ delay: 1.5, duration: 1, repeat: Infinity, repeatType: "reverse" }}
-             style={{ position: 'absolute', bottom: '2rem', left: '50%', transform: 'translateX(-50%)' }}
+          <motion.div
+            className={styles.scrollHint}
+            initial={{ opacity: 0, y: -12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.2, duration: 1, repeat: Infinity, repeatType: "reverse" }}
           >
-            <ChevronDown className={styles.skillIcon} size={32} />
+            <ChevronDown size={28} strokeWidth={1.5} />
           </motion.div>
         </section>
 
         {/* What I Do Section */}
         <section className="section" id="skills">
-          <motion.h2 
+          <motion.div
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
             variants={FADE_UP_ANIMATION_VARIANTS}
-            className={styles.sectionTitle}
           >
-            Core Competencies
-          </motion.h2>
+            <span className={styles.sectionLabel}>Expertise</span>
+            <h2 className={styles.sectionTitle}>Core competencies</h2>
+          </motion.div>
           
           <div className={styles.skillsGrid}>
             {[
@@ -113,21 +113,21 @@ export default function Home() {
         </section>
 
         {/* Contact Snippet */}
-        <section className="section" id="contact" style={{ paddingBottom: '8rem', textAlign: 'center' }}>
+        <section className={`section ${styles.contactSection}`} id="contact">
           <motion.div
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
             variants={FADE_UP_ANIMATION_VARIANTS}
-            className="glass-card"
-            style={{ maxWidth: '600px', margin: '0 auto' }}
+            className={`glass-card ${styles.contactCard}`}
           >
-            <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem', marginTop: 0, letterSpacing: '-0.02em' }}>Let&apos;s build something great.</h2>
-            <p style={{ color: 'var(--muted)', marginBottom: '2.5rem', fontSize: '1.1rem', lineHeight: '1.6' }}>
+            <span className={styles.sectionLabel}>Contact</span>
+            <h2 className={styles.contactHeading}>Let&apos;s build something great.</h2>
+            <p className={styles.contactCopy}>
               I&apos;m always open to discussing web application projects, architecture discussions, or professional opportunities.
             </p>
             <a href="mailto:imteazsadat3@gmail.com" className={styles.contactCTA}>
-              <Mail size={20} /> Reach Out via Email
+              <Mail size={18} strokeWidth={2} /> Email me
             </a>
           </motion.div>
         </section>
