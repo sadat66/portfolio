@@ -1,66 +1,137 @@
-import Image from "next/image";
+"use client";
+
+import { motion } from "framer-motion";
+import { Terminal, Database, Layout, Mail, ChevronDown } from "lucide-react";
 import styles from "./page.module.css";
+
+const FADE_UP_ANIMATION_VARIANTS = {
+  hidden: { opacity: 0, y: 20 },
+  show: { opacity: 1, y: 0, transition: { type: "spring" as const, stiffness: 100, damping: 20 } },
+};
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.tsx file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <main className={styles.main}>
+      <div className="bg-gradient" />
+      
+      <div className="container">
+        {/* Navigation spacer or header could go here */}
+        
+        {/* Hero Section */}
+        <section className={styles.hero}>
+          <motion.div
+            initial="hidden"
+            animate="show"
+            viewport={{ once: true }}
+            variants={{
+              hidden: {},
+              show: {
+                transition: {
+                  staggerChildren: 0.15,
+                },
+              },
+            }}
           >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            <motion.h1 variants={FADE_UP_ANIMATION_VARIANTS} className={styles.title}>
+              Imteaz Sadat <br /> Hossain.
+            </motion.h1>
+            <motion.p variants={FADE_UP_ANIMATION_VARIANTS} className={styles.subtitle}>
+              Full Stack Software Developer crafting fast, performant, and robust web experiences with beautiful modern design.
+            </motion.p>
+            <motion.a 
+              variants={FADE_UP_ANIMATION_VARIANTS} 
+              href="#contact" 
+              className={styles.contactCTA}
+            >
+              <Mail size={20} /> Let&apos;s Connect
+            </motion.a>
+          </motion.div>
+          
+          <motion.div 
+             initial={{ opacity: 0, y: -20 }}
+             animate={{ opacity: 1, y: 0 }}
+             transition={{ delay: 1.5, duration: 1, repeat: Infinity, repeatType: "reverse" }}
+             style={{ position: 'absolute', bottom: '2rem', left: '50%', transform: 'translateX(-50%)' }}
           >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+            <ChevronDown className={styles.skillIcon} size={32} />
+          </motion.div>
+        </section>
+
+        {/* What I Do Section */}
+        <section className="section" id="skills">
+          <motion.h2 
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            variants={FADE_UP_ANIMATION_VARIANTS}
+            className={styles.sectionTitle}
+          >
+            Core Competencies
+          </motion.h2>
+          
+          <div className={styles.skillsGrid}>
+            {[
+              {
+                title: "Frontend Engineering",
+                icon: <Layout className={styles.skillIcon} />,
+                items: ["React & Next.js", "Vanilla CSS / CSS Modules", "Framer Motion", "Responsive Design"]
+              },
+              {
+                title: "Backend Architecture",
+                icon: <Terminal className={styles.skillIcon} />,
+                items: ["Node.js & Express", "RESTful Data APIs", "Secure Authentication", "High-Performance Services"]
+              },
+              {
+                title: "Database & Logic",
+                icon: <Database className={styles.skillIcon} />,
+                items: ["PostgreSQL & MongoDB", "Data Modeling", "Query Optimization", "Prisma / Mongoose"]
+              }
+            ].map((skill, index) => (
+              <motion.div 
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="glass-card"
+              >
+                <div className={styles.skillHeader}>
+                  {skill.icon}
+                  <span>{skill.title}</span>
+                </div>
+                <ul className={styles.skillList}>
+                  {skill.items.map((item, i) => (
+                    <li key={i} className={styles.skillItem}>
+                      <span className={styles.skillDot} />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
+          </div>
+        </section>
+
+        {/* Contact Snippet */}
+        <section className="section" id="contact" style={{ paddingBottom: '8rem', textAlign: 'center' }}>
+          <motion.div
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            variants={FADE_UP_ANIMATION_VARIANTS}
+            className="glass-card"
+            style={{ maxWidth: '600px', margin: '0 auto' }}
+          >
+            <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem', marginTop: 0, letterSpacing: '-0.02em' }}>Let&apos;s build something great.</h2>
+            <p style={{ color: 'var(--muted)', marginBottom: '2.5rem', fontSize: '1.1rem', lineHeight: '1.6' }}>
+              I&apos;m always open to discussing web application projects, architecture discussions, or professional opportunities.
+            </p>
+            <a href="mailto:hello@example.com" className={styles.contactCTA}>
+              <Mail size={20} /> Reach Out via Email
+            </a>
+          </motion.div>
+        </section>
+      </div>
+    </main>
   );
 }
