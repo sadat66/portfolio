@@ -9,7 +9,7 @@ I'm a Full-Stack Software Developer dedicated to building digital experiences th
 
 ## 🛠 What I Build With
 I specialize in the modern web stack, specifically:
-- **Frontend**: Next.js 16, React, Framer Motion, and pure CSS.
+- **Frontend**: Next.js 16, React, Framer Motion, and tailwind or vanilla CSS.
 - **Backend**: Node.js, Express, and high-performance server architectures.
 - **Data**: PostgreSQL and MongoDB with advanced query optimization.
 
