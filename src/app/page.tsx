@@ -1,4 +1,4 @@
-import { ArrowUpRight, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowUpRight, Github, Linkedin, Mail, Music } from "lucide-react";
 
 const EXPERIENCE = [
   {
@@ -49,11 +49,20 @@ export default function Home() {
           <p className="m-0 border-l-2 border-[var(--accent)] pl-3 text-xs font-semibold tracking-tight uppercase">
             IMTEAZ SADAT
           </p>
-          <nav className="hidden gap-5 text-xs text-[var(--muted)] md:flex">
+          <nav className="hidden gap-5 text-xs text-[var(--muted)] md:flex lg:gap-8">
             <a href="#experience" className="transition-colors hover:text-[var(--accent)]">Experience</a>
             <a href="#projects" className="transition-colors hover:text-[var(--accent)]">Projects</a>
             <a href="#skills" className="transition-colors hover:text-[var(--accent)]">Skills</a>
             <a href="#contact" className="transition-colors hover:text-[var(--accent)]">Contact</a>
+            <a 
+              href="https://music.youtube.com/playlist?list=PLPDuaJTLxFK7p-P2wMaw_RrDh9v4Ql58F&si=vuAhownij6rKVOn2" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="flex items-center gap-1.5 transition-colors hover:text-[var(--accent)]"
+            >
+              <Music size={14} className="text-[var(--accent)]" />
+              sadat&apos;s playlist
+            </a>
           </nav>
         </header>
 
@@ -177,6 +186,19 @@ export default function Home() {
             <div>
               <p className="text-xs font-bold uppercase text-[var(--accent)] mb-1">Interests</p>
               <p className="text-sm text-[var(--muted)]">LLMs, RAGs, PC Hardware</p>
+            </div>
+            <div>
+              <p className="text-xs font-bold uppercase text-[var(--accent)] mb-1">Playlist</p>
+              <a 
+                href="https://music.youtube.com/playlist?list=PLPDuaJTLxFK7p-P2wMaw_RrDh9v4Ql58F&si=vuAhownij6rKVOn2" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-sm text-[var(--muted)] hover:text-[var(--accent)] transition-colors"
+              >
+                <Music size={14} className="text-[var(--accent)]" />
+                <span>On YouTube Music</span>
+                <ArrowUpRight size={12} />
+              </a>
             </div>
             <div>
               <p className="text-xs font-bold uppercase text-[var(--accent)] mb-1">Location</p>
