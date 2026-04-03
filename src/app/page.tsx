@@ -4,42 +4,39 @@ const EXPERIENCE = [
   {
     role: "Software Engineer",
     company: "Corexlab",
-    period: "January 2023 – May 2026",
-    summary: "Developed web applications using React.js, Next.js, Node.js, and MongoDB. Designed and implemented complex business logic and scalable features. Optimized system architecture for better performance. Collaborated with stakeholders to translate business needs into technical solutions.",
+    period: "2023 – 2026",
+    location: "Dhaka, Bangladesh",
+    points: [
+      "Collaborated with stakeholders to translate business goals into actionable technical specifications.",
+      "Developed enterprise web applications using the MERN stack and Next.js, focusing on modularity and reusability.",
+      "Optimized agile delivery cycles, meeting mission-critical deadlines while maintaining scalability to handle evolving product requirements of the client.",
+    ],
   },
 ];
 
 const PROJECTS = [
   {
-    title: "iLeap – Volunteer Management Platform",
-    description: "Multi-role platform with real-time messaging and event management. Defined architecture and user flows, translating product ideas into technical execution.",
+    title: "BuildReady | Full-Stack Developer",
+    description: "Architected a multi-tenant construction marketplace using a Three-Tier Monetization Model. Developed a Digital Tendering System with state machines and implemented a legally binding Digital Signature Engine with automated PDF generation.",
   },
   {
-    title: "Tax Management & Financial Analysis System",
-    description: "Integrated Open Banking APIs for transaction classification logic. Built scalable backend for financial data processing and tax reporting.",
-  },
-  {
-    title: "BuildReady System",
-    description: "Construction workflow platform implementing core CRUD operations and business logic for project lifecycle with focus on clean UI design.",
+    title: "iLeap | Full-Stack Developer",
+    description: "Designed a multi-role RBAC ecosystem for Volunteers, Organizations, and Mentors. Engineered a high-performance filtering engine for opportunity matching and a messaging infrastructure supporting DMs and group coordination.",
   },
 ];
 
 const SKILLS = [
   {
-    category: "Product & Business",
-    items: ["Requirement Analysis (SRS, BRD, WBS)", "MVP Planning", "Feature Prioritization", "User Journey Mapping", "Stakeholder Communication"],
+    category: "Languages & Frameworks",
+    items: ["Typescript", "Next.js", "Node.js", "MongoDB", "PostgreSQL", "RESTful API", "Tailwind"],
   },
   {
-    category: "Development",
-    items: ["JavaScript", "React.js", "Next.js", "Node.js", "Express.js", "MongoDB", "REST API Design", "Tailwind CSS"],
+    category: "Technologies & Infrastructure",
+    items: ["MySQL", "Postgres", "Vercel", "Git", "Supabase"],
   },
   {
-    category: "Testing & QA",
-    items: ["Test Case Design", "Manual Testing", "API Testing (Postman)", "Performance Testing (JMeter)", "Basic Automation (Cypress, Selenium)"],
-  },
-  {
-    category: "Tools & Workflow",
-    items: ["Git & GitHub", "JIRA", "CI/CD Basics", "Agile / Scrum Methodology"],
+    category: "Other & Engineering",
+    items: ["End to end development", "Requirement Engineering", "MVP Architecture", "Stakeholder Management"],
   },
 ];
 
@@ -50,10 +47,9 @@ export default function Home() {
       <div className="mx-auto max-w-5xl px-6 pb-16 pt-9">
         <header className="flex items-center justify-between gap-4 border-b border-[var(--surface-border)] pb-4">
           <p className="m-0 border-l-2 border-[var(--accent)] pl-3 text-xs font-semibold tracking-tight uppercase">
-            IMTEAZ SADAT HOSSAIN
+            IMTEAZ SADAT
           </p>
           <nav className="hidden gap-5 text-xs text-[var(--muted)] md:flex">
-            <a href="#about" className="transition-colors hover:text-[var(--accent)]">About</a>
             <a href="#experience" className="transition-colors hover:text-[var(--accent)]">Experience</a>
             <a href="#projects" className="transition-colors hover:text-[var(--accent)]">Projects</a>
             <a href="#skills" className="transition-colors hover:text-[var(--accent)]">Skills</a>
@@ -70,20 +66,19 @@ export default function Home() {
             <p className="m-0 text-[0.75rem] font-semibold uppercase tracking-[0.14em] text-[var(--accent)]">
               Product-Oriented Full Stack Engineer
             </p>
-            <h1 className="mb-4 mt-2 bg-gradient-to-br from-[var(--foreground)] via-[var(--foreground)] to-[var(--accent)]/80 bg-clip-text text-[clamp(2.2rem,8vw,4.8rem)] font-[680] leading-[0.98] tracking-[-0.03em] text-transparent">
+            <h1 className="mb-4 mt-2 bg-gradient-to-br from-[var(--foreground)] via-[var(--foreground)] to-[var(--accent)]/80 bg-clip-text text-[clamp(2.2rem,8vw,4.2rem)] font-[680] leading-[0.98] tracking-[-0.03em] text-transparent">
               Imteaz
               <br />
-              Sadat Hossain.
+              Sadat.
             </h1>
             <p className="m-0 max-w-[38rem] leading-relaxed text-[var(--muted)]">
-              Expertise in translating business requirements into scalable digital solutions. 
-              Bridging the gap between engineering and business with a <strong>QA-driven approach</strong>.
+              I am a full-stack software engineer especially interested in building scalable digital products, and shipping fast MVPs that bridges the gap between the stakeholder requirements and high performance execution as well as maintaining a QA centric approach.
             </p>
             <div className="mt-6 flex gap-4">
               <a href="https://github.com/sadat66" target="_blank" rel="noopener noreferrer" className="text-[var(--muted)] hover:text-[var(--accent)] transition-colors">
                 <Github size={20} />
               </a>
-              <a href="https://linkedin.com/in/imteaz-sadat-3987701b2" target="_blank" rel="noopener noreferrer" className="text-[var(--muted)] hover:text-[var(--accent)] transition-colors">
+              <a href="https://linkedin.com/in/isadat" target="_blank" rel="noopener noreferrer" className="text-[var(--muted)] hover:text-[var(--accent)] transition-colors">
                 <Linkedin size={20} />
               </a>
               <a href="mailto:imteazsadat3@gmail.com" className="text-[var(--muted)] hover:text-[var(--accent)] transition-colors">
@@ -91,44 +86,17 @@ export default function Home() {
               </a>
             </div>
           </div>
-          <div className="aspect-[4/5] rounded-sm border border-[var(--surface-border)] bg-[var(--accent-glow)] p-3 shadow-[0_20px_50px_-20px_color-mix(in_srgb,var(--accent)_35%,transparent)] ring-1 ring-[var(--accent)]/10">
-            <div className="flex h-full w-full items-center justify-center rounded-sm border border-dashed border-[var(--accent)]/25 bg-[var(--surface)]/80 text-xs text-[var(--muted)]">
-              Profile image placeholder
+          <div className="flex justify-center md:justify-end">
+            <div className="relative aspect-square w-48 overflow-hidden rounded-2xl border border-[var(--surface-border)] bg-[var(--accent-glow)] p-1 shadow-lg ring-1 ring-[var(--accent)]/10">
+              <img 
+                src="/dp/myface.jpg" 
+                alt="Imteaz Sadat" 
+                className="h-full w-full rounded-xl object-cover"
+              />
             </div>
           </div>
         </section>
 
-        <section id="about" className="grid gap-8 border-y border-[var(--surface-border)] py-12 md:grid-cols-[1fr_1.35fr]">
-          <div>
-            <h2 className="mb-4 text-[clamp(1.35rem,3vw,1.8rem)] font-semibold tracking-[-0.02em]">
-              The Product{" "}
-              <span className="text-[var(--accent)]">Mindset</span>
-            </h2>
-          </div>
-          <div>
-            <p className="m-0 leading-relaxed text-[var(--muted)]">
-              Experienced in end-to-end product delivery, from requirements gathering to deployment. 
-              I specialize in system design, business logic implementation, and writing test cases 
-              to ensure product reliability and high impact.
-            </p>
-            <div className="mt-6 grid gap-6 md:grid-cols-2">
-              <article className="rounded-lg border border-[var(--surface-border)] bg-[var(--accent-soft)]/50 p-4">
-                <h3 className="m-0 text-sm font-semibold text-[var(--accent)]">Execution</h3>
-                <p className="mt-2 text-sm leading-relaxed text-[var(--muted)]">
-                  My workflow prioritizes high-fidelity technical documentation (SRS, BRD) that translates 
-                  smoothly between engineering and business stakeholders.
-                </p>
-              </article>
-              <article className="rounded-lg border border-[var(--surface-border)] bg-[var(--accent-soft)]/50 p-4">
-                <h3 className="m-0 text-sm font-semibold text-[var(--accent)]">Reliability</h3>
-                <p className="mt-2 text-sm leading-relaxed text-[var(--muted)]">
-                  QA-driven approach to building high-impact platforms. I focus on comprehensive testing 
-                  strategies to ensure every release meets the highest quality standards.
-                </p>
-              </article>
-            </div>
-          </div>
-        </section>
 
         <section id="experience" className="py-12">
           <h2 className="mb-4 flex flex-wrap items-baseline gap-3 text-[clamp(1.35rem,3vw,1.8rem)] font-semibold tracking-[-0.02em]">
@@ -146,8 +114,12 @@ export default function Home() {
                     {job.period}
                   </span>
                 </div>
-                <p className="mb-0 mt-1 font-semibold text-[var(--accent)]">{job.company}</p>
-                <p className="mb-0 mt-3 text-sm leading-relaxed text-[var(--muted)]">{job.summary}</p>
+                <p className="mb-0 mt-1 font-semibold text-[var(--accent)]">{job.company} • {job.location}</p>
+                <ul className="mb-0 mt-3 list-disc pl-5 text-sm leading-relaxed text-[var(--muted)]">
+                  {job.points.map((point, i) => (
+                    <li key={i} className="mb-2">{point}</li>
+                  ))}
+                </ul>
               </article>
             ))}
           </div>
@@ -193,7 +165,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
             <div>
               <h2 className="text-[clamp(1.35rem,3vw,1.8rem)] font-semibold tracking-[-0.02em]">Education</h2>
-              <p className="mt-2 text-lg text-[var(--foreground)] font-medium">Bachelor of Science in Computer Science & Engineering</p>
+              <p className="mt-2 text-lg text-[var(--foreground)] font-medium">B.Sc. Computer Science, North South University</p>
             </div>
             <div className="text-left md:text-right">
               <span className="rounded-full border border-[var(--accent)]/20 bg-[var(--accent-soft)]/60 px-3 py-1 text-xs uppercase tracking-[0.08em] text-[var(--muted)]">
@@ -203,16 +175,12 @@ export default function Home() {
           </div>
           <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4">
             <div>
-              <p className="text-xs font-bold uppercase text-[var(--accent)] mb-1">Languages</p>
-              <p className="text-sm text-[var(--muted)]">English (Professional)<br/>Bangla (Native)</p>
-            </div>
-            <div>
               <p className="text-xs font-bold uppercase text-[var(--accent)] mb-1">Interests</p>
-              <p className="text-sm text-[var(--muted)]">SaaS, Fintech, Automation</p>
+              <p className="text-sm text-[var(--muted)]">LLMs, RAGs, PC Hardware</p>
             </div>
             <div>
-              <p className="text-xs font-bold uppercase text-[var(--accent)] mb-1">Strengths</p>
-              <p className="text-sm text-[var(--muted)]">Product Alignment, QA Mindset</p>
+              <p className="text-xs font-bold uppercase text-[var(--accent)] mb-1">Location</p>
+              <p className="text-sm text-[var(--muted)]">Dhaka, Bangladesh</p>
             </div>
           </div>
         </section>
@@ -228,7 +196,7 @@ export default function Home() {
                 imteazsadat3@gmail.com
               </a>
               <div className="flex gap-6">
-                <a href="https://linkedin.com/in/imteaz-sadat-3987701b2" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 font-medium text-[var(--foreground)] transition-colors hover:text-[var(--accent)]">
+                <a href="https://linkedin.com/in/isadat" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 font-medium text-[var(--foreground)] transition-colors hover:text-[var(--accent)]">
                   LinkedIn <ArrowUpRight size={14} className="text-[var(--accent)]" />
                 </a>
                 <a href="https://github.com/sadat66" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 font-medium text-[var(--foreground)] transition-colors hover:text-[var(--accent)]">
