@@ -98,7 +98,7 @@ export default function Home() {
           <div className="flex justify-center md:justify-end">
             <div className="relative aspect-square w-48 overflow-hidden rounded-2xl border border-[var(--surface-border)] bg-[var(--accent-glow)] p-1 shadow-lg ring-1 ring-[var(--accent)]/10">
               <img 
-                src="/dp/myface.jpg" 
+                src="/dp/myface.jpeg" 
                 alt="Imteaz Sadat" 
                 className="h-full w-full rounded-xl object-cover"
               />
