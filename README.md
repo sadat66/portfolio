@@ -1,24 +1,52 @@
-# 👋 Hi, I'm Imteaz Sadat Hossain
+# Imteaz Sadat
 
-I'm a Full-Stack Software Developer dedicated to building digital experiences that are not only functional but also fast, secure, and visually stunning. Beyond code, I specialize in high-fidelity documentation and cross-functional communication, bridging the gap between engineering and business stakeholders with clarity and precision.
+I build custom RAG-based chat systems for startup and SMB teams that need fast, reliable assistants grounded in their own data.
 
-## 🚀 My Approach
-- **Technical/Business Bridge**: I translate complex engineering architecture into clear business value. My strong documentation skills ensure that everyone from developers to CEOs is aligned.
-- **Strategic Communication**: Fluent in English and experienced in stakeholder management, I thrive in environments requiring confident presentation and collaborative problem-solving.
-- **Performance & Security**: I prioritize core web vitals and secure architecture—opting for native standards like the Fetch API to keep deployments lean and robust.
+## What I Offer
 
-## 🛠 What I Build With
-I specialize in the modern web stack, specifically:
-- **Frontend**: Next.js 16, React, Framer Motion, and tailwind or vanilla CSS.
-- **Backend**: Node.js, Express, and high-performance server architectures.
-- **Data**: PostgreSQL and MongoDB with advanced query optimization.
+### 1) Validation Sprint (1-2 weeks)
+- Validate the business use case and target workflow
+- Assess your current data sources for retrieval quality
+- Deliver a practical architecture and rollout plan
 
-## 📬 Connectivity
-I'm always open to discussing complex web architectures, new professional opportunities, or or just chatting about the future of tech.
+### 2) MVP Build (3-6 weeks)
+- Build and ship a production-ready RAG chat assistant
+- Implement ingestion, chunking, embeddings, and vector retrieval
+- Add guardrails and quality checks for reliable responses
 
-- **Direct Email**: imteazsadat3@gmail.com
-- **Live Version**: [View My Work](https://portfolio-omega-nine-86.vercel.app/)
+### 3) Scale and Optimize (ongoing)
+- Improve latency, answer quality, and user adoption
+- Add evaluation workflows to reduce hallucination risk
+- Iterate based on real usage and product priorities
 
----
-*"Software is a great combination of artistry and engineering."*
-- Imteaz Sadat Hossain
+## Best Fit
+- Docs-heavy products with recurring support questions
+- Teams with internal knowledge spread across multiple tools
+- Founders who want a focused AI assistant MVP shipped fast
+
+## Project Proof: Grimoire
+- Built a full RAG pipeline for lore and gameplay Q&A
+- Designed ingestion, chunking, embeddings, and semantic retrieval
+- Implemented admin controls and optimization for API usage
+
+## Discovery Call
+
+If you want a personalized RAG chat system for your product or domain, contact me to discuss scope and timeline.
+
+- **Email**: [imteazsadat3@gmail.com](mailto:imteazsadat3@gmail.com)
+- **Book a Call**: [Request Discovery Call](mailto:imteazsadat3@gmail.com?subject=Discovery%20Call%20Request%20-%20Custom%20RAG%20System)
+- **LinkedIn**: [linkedin.com/in/isadat](https://linkedin.com/in/isadat)
+- **Portfolio**: [View Website](https://portfolio-omega-nine-86.vercel.app/)
+
+## LinkedIn Marketing Cadence
+- One pain-point post for founders (business problem + cost of delay)
+- One implementation insight post (RAG architecture or optimization)
+- One mini case-study post with a call-to-action to book a discovery call
+
+## Funnel Metrics
+- Landing visitors
+- CTA clicks
+- Discovery calls booked
+- Qualified leads
+
+Run one headline + CTA test every 2 weeks and keep the version that improves qualified bookings.

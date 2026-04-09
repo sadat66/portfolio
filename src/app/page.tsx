@@ -1,5 +1,104 @@
 import { ArrowUpRight, Github, Linkedin, Mail, Music } from "lucide-react";
 
+const BOOK_CALL_URL =
+  "mailto:imteazsadat3@gmail.com?subject=Discovery%20Call%20Request%20-%20Custom%20RAG%20System&body=Hi%20Imteaz%2C%0A%0AI%20want%20to%20discuss%20a%20custom%20RAG-based%20chat%20system.%0A%0ACompany%3A%0AUse%20case%3A%0ATimeline%3A%0A";
+
+const RAG_PACKAGES = [
+  {
+    name: "Validation Sprint",
+    timeline: "1-2 weeks",
+    engagement: "Fixed scope",
+    outcomes: [
+      "Use-case and data-source validation",
+      "Retrieval and response quality baseline",
+      "Architecture recommendation with implementation roadmap",
+    ],
+  },
+  {
+    name: "MVP Build",
+    timeline: "3-6 weeks",
+    engagement: "Build and launch",
+    outcomes: [
+      "Production-ready RAG chat assistant",
+      "Data ingestion, chunking, embeddings, and retrieval pipeline",
+      "Guardrails, monitoring, and launch support",
+    ],
+  },
+  {
+    name: "Scale & Optimize",
+    timeline: "Ongoing",
+    engagement: "Retainer",
+    outcomes: [
+      "Latency and accuracy optimization",
+      "Evaluation workflows to reduce hallucination risk",
+      "Feature iteration for team and customer adoption",
+    ],
+  },
+];
+
+const QUALIFICATION = {
+  bestFit: [
+    "Docs-heavy products with growing support load",
+    "Teams with internal knowledge spread across tools",
+    "Founders needing a fast, reliable AI assistant MVP",
+  ],
+  notFitYet: [
+    "No usable data source or documentation",
+    "Unclear user problem or no target workflow",
+    "Need a generic chatbot without domain grounding",
+  ],
+};
+
+const DELIVERY_PROCESS = [
+  {
+    title: "Discovery",
+    description: "Define use case, target users, and success metrics for the assistant.",
+  },
+  {
+    title: "Data Design",
+    description: "Map sources, chunking strategy, and retrieval logic for domain context.",
+  },
+  {
+    title: "RAG Build",
+    description: "Implement ingestion, vector search, response flow, and safety controls.",
+  },
+  {
+    title: "Launch & Iterate",
+    description: "Ship MVP, track quality, and optimize with real usage data.",
+  },
+];
+
+const FAQS = [
+  {
+    question: "How long does an MVP take?",
+    answer:
+      "Most MVPs ship in 3-6 weeks, depending on data readiness and integration scope.",
+  },
+  {
+    question: "Can you use our existing stack?",
+    answer:
+      "Yes. I can integrate with common startup stacks and adapt to your current backend, auth, and data setup.",
+  },
+  {
+    question: "How do you handle hallucinations and evaluation?",
+    answer:
+      "I use grounded retrieval, prompt guardrails, and evaluation checks against expected answers to improve reliability over time.",
+  },
+];
+
+const WEEKLY_LINKEDIN_CADENCE = [
+  "One founder pain-point post (problem and business impact)",
+  "One implementation insight post (architecture or optimization lesson)",
+  "One mini case-study post with a CTA to book a discovery call",
+];
+
+const FUNNEL_METRICS = [
+  "Landing visitors",
+  "CTA clicks",
+  "Discovery calls booked",
+  "Qualified leads",
+];
+
 const EXPERIENCE = [
   {
     role: "Software Engineer",
@@ -87,7 +186,7 @@ export default function Home() {
               className="absolute left-0 top-1 bottom-0 w-px bg-gradient-to-b from-[var(--accent)]/70 via-[var(--accent)]/25 to-transparent"
             />
             <p className="m-0 text-[0.75rem] font-semibold uppercase tracking-[0.14em] text-[var(--accent)]">
-              Product-Oriented Full Stack Engineer
+              Custom RAG Systems for Startup Teams
             </p>
             <h1 className="mb-4 mt-2 bg-gradient-to-br from-[var(--foreground)] via-[var(--foreground)] to-[var(--accent)]/80 bg-clip-text text-[clamp(2.2rem,8vw,4.2rem)] font-[680] leading-[0.98] tracking-[-0.03em] text-transparent">
               Imteaz
@@ -95,8 +194,22 @@ export default function Home() {
               Sadat.
             </h1>
             <p className="m-0 max-w-[38rem] leading-relaxed text-[var(--muted)]">
-              I am a Software Engineer experienced in bridging stakeholder requirements with engineering execution, leading client communication, and delivering high-impact features end-to-end. I focus on building reliable, scalable systems with strong real-world usability and performance.
+              I help startup and SMB founders build custom RAG-based chat systems grounded in their own product and business data. From architecture to launch, I deliver reliable assistants that reduce support load and improve knowledge access.
             </p>
+            <div className="mt-6 flex flex-wrap gap-3">
+              <a
+                href={BOOK_CALL_URL}
+                className="inline-flex items-center gap-1.5 rounded-md border border-[var(--accent)]/30 bg-[var(--accent-soft)] px-4 py-2 text-sm font-medium text-[var(--foreground)] transition-colors hover:border-[var(--accent)] hover:text-[var(--accent)]"
+              >
+                Book a Discovery Call <ArrowUpRight size={14} />
+              </a>
+              <a
+                href="mailto:imteazsadat3@gmail.com?subject=Custom%20RAG%20Project%20Inquiry"
+                className="inline-flex items-center gap-1.5 rounded-md border border-[var(--surface-border)] px-4 py-2 text-sm text-[var(--muted)] transition-colors hover:border-[var(--accent)]/30 hover:text-[var(--foreground)]"
+              >
+                Email project details <Mail size={14} />
+              </a>
+            </div>
             <div className="mt-6 flex gap-4">
               <a href="https://github.com/sadat66" target="_blank" rel="noopener noreferrer" className="text-[var(--muted)] hover:text-[var(--accent)] transition-colors">
                 <Github size={20} />
@@ -148,6 +261,48 @@ export default function Home() {
           </div>
         </section>
 
+        <section id="rag-services" className="py-12 border-t border-[var(--surface-border)]">
+          <h2 className="mb-2 text-[clamp(1.35rem,3vw,1.8rem)] font-semibold tracking-[-0.02em]">
+            RAG Services
+          </h2>
+          <p className="mb-8 max-w-[44rem] text-sm leading-relaxed text-[var(--muted)]">
+            Productized engagement options for teams that need a domain-specific assistant built fast and shipped with production quality.
+          </p>
+          <div className="grid gap-5 md:grid-cols-3">
+            {RAG_PACKAGES.map((pkg) => (
+              <article key={pkg.name} className="rounded-xl border border-[var(--surface-border)] bg-[var(--surface)] p-5">
+                <h3 className="m-0 text-base font-semibold">{pkg.name}</h3>
+                <p className="mt-2 text-xs uppercase tracking-[0.08em] text-[var(--muted)]">
+                  {pkg.timeline} • {pkg.engagement}
+                </p>
+                <ul className="mb-0 mt-4 list-disc pl-5 text-sm leading-relaxed text-[var(--muted)]">
+                  {pkg.outcomes.map((item) => (
+                    <li key={item} className="mb-2">{item}</li>
+                  ))}
+                </ul>
+              </article>
+            ))}
+          </div>
+          <div className="mt-8 grid gap-5 md:grid-cols-2">
+            <article className="rounded-xl border border-[var(--surface-border)] bg-[var(--surface)] p-5">
+              <h3 className="m-0 text-sm font-semibold uppercase tracking-[0.08em] text-[var(--accent)]">Best Fit</h3>
+              <ul className="mb-0 mt-3 list-disc pl-5 text-sm leading-relaxed text-[var(--muted)]">
+                {QUALIFICATION.bestFit.map((item) => (
+                  <li key={item} className="mb-2">{item}</li>
+                ))}
+              </ul>
+            </article>
+            <article className="rounded-xl border border-[var(--surface-border)] bg-[var(--surface)] p-5">
+              <h3 className="m-0 text-sm font-semibold uppercase tracking-[0.08em] text-[var(--accent)]">Not a Fit Yet</h3>
+              <ul className="mb-0 mt-3 list-disc pl-5 text-sm leading-relaxed text-[var(--muted)]">
+                {QUALIFICATION.notFitYet.map((item) => (
+                  <li key={item} className="mb-2">{item}</li>
+                ))}
+              </ul>
+            </article>
+          </div>
+        </section>
+
         <section id="projects" className="py-12">
           <h2 className="mb-6 text-[clamp(1.35rem,3vw,1.8rem)] font-semibold tracking-[-0.02em]">
             Featured Projects
@@ -185,6 +340,81 @@ export default function Home() {
                 )}
               </article>
             ))}
+          </div>
+        </section>
+
+        <section id="case-study" className="py-12 border-t border-[var(--surface-border)]">
+          <h2 className="mb-6 text-[clamp(1.35rem,3vw,1.8rem)] font-semibold tracking-[-0.02em]">
+            Grimoire Case Study
+          </h2>
+          <article className="rounded-xl border border-[var(--surface-border)] bg-[var(--surface)] p-6">
+            <p className="m-0 text-xs font-semibold uppercase tracking-[0.1em] text-[var(--accent)]">Problem</p>
+            <p className="mt-2 text-sm leading-relaxed text-[var(--muted)]">
+              Game lore and gameplay knowledge were fragmented across long-form docs and hard to query quickly.
+            </p>
+            <p className="m-0 mt-5 text-xs font-semibold uppercase tracking-[0.1em] text-[var(--accent)]">Solution</p>
+            <p className="mt-2 text-sm leading-relaxed text-[var(--muted)]">
+              Built an end-to-end RAG pipeline: ingestion, chunking, embeddings, vector retrieval, and grounded LLM response generation with admin controls for updates.
+            </p>
+            <p className="m-0 mt-5 text-xs font-semibold uppercase tracking-[0.1em] text-[var(--accent)]">Outcome</p>
+            <p className="mt-2 text-sm leading-relaxed text-[var(--muted)]">
+              Users received faster, context-aware answers while system maintainers gained better control over data quality and assistant behavior.
+            </p>
+          </article>
+        </section>
+
+        <section id="process" className="py-12 border-t border-[var(--surface-border)]">
+          <h2 className="mb-6 text-[clamp(1.35rem,3vw,1.8rem)] font-semibold tracking-[-0.02em]">
+            How I Work
+          </h2>
+          <div className="grid gap-5 md:grid-cols-2">
+            {DELIVERY_PROCESS.map((step) => (
+              <article key={step.title} className="rounded-xl border border-[var(--surface-border)] bg-[var(--surface)] p-5">
+                <h3 className="m-0 text-base font-semibold">{step.title}</h3>
+                <p className="mb-0 mt-2 text-sm leading-relaxed text-[var(--muted)]">{step.description}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section id="faq" className="py-12 border-t border-[var(--surface-border)]">
+          <h2 className="mb-6 text-[clamp(1.35rem,3vw,1.8rem)] font-semibold tracking-[-0.02em]">
+            FAQ
+          </h2>
+          <div className="grid gap-5 md:grid-cols-3">
+            {FAQS.map((faq) => (
+              <article key={faq.question} className="rounded-xl border border-[var(--surface-border)] bg-[var(--surface)] p-5">
+                <h3 className="m-0 text-sm font-semibold">{faq.question}</h3>
+                <p className="mb-0 mt-3 text-sm leading-relaxed text-[var(--muted)]">{faq.answer}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section id="growth" className="py-12 border-t border-[var(--surface-border)]">
+          <h2 className="mb-6 text-[clamp(1.35rem,3vw,1.8rem)] font-semibold tracking-[-0.02em]">
+            Marketing Cadence & Metrics
+          </h2>
+          <div className="grid gap-5 md:grid-cols-2">
+            <article className="rounded-xl border border-[var(--surface-border)] bg-[var(--surface)] p-5">
+              <h3 className="m-0 text-sm font-semibold uppercase tracking-[0.08em] text-[var(--accent)]">Weekly LinkedIn Cadence</h3>
+              <ul className="mb-0 mt-3 list-disc pl-5 text-sm leading-relaxed text-[var(--muted)]">
+                {WEEKLY_LINKEDIN_CADENCE.map((item) => (
+                  <li key={item} className="mb-2">{item}</li>
+                ))}
+              </ul>
+            </article>
+            <article className="rounded-xl border border-[var(--surface-border)] bg-[var(--surface)] p-5">
+              <h3 className="m-0 text-sm font-semibold uppercase tracking-[0.08em] text-[var(--accent)]">Funnel Tracking</h3>
+              <ul className="mb-0 mt-3 list-disc pl-5 text-sm leading-relaxed text-[var(--muted)]">
+                {FUNNEL_METRICS.map((item) => (
+                  <li key={item} className="mb-2">{item}</li>
+                ))}
+              </ul>
+              <p className="mb-0 mt-4 text-sm leading-relaxed text-[var(--muted)]">
+                Run one headline and CTA experiment every 2 weeks, then keep the version that improves call-booking quality.
+              </p>
+            </article>
           </div>
         </section>
 
