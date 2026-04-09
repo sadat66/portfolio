@@ -7,43 +7,50 @@ const EXPERIENCE = [
     period: "2023 – 2026",
     location: "Dhaka, Bangladesh",
     points: [
-      "Collaborated with stakeholders to translate business goals into actionable technical specifications.",
-      "Developed enterprise web applications using the MERN stack and Next.js, focusing on modularity and reusability.",
-      "Optimized agile delivery cycles, meeting mission-critical deadlines while maintaining scalability to handle evolving product requirements of the client.",
+      "Acted as a technical bridge between clients and engineering teams, leading requirement discussions, demos, and delivery alignment.",
+      "Translated business requirements into scalable system designs and implementation plans.",
+      "Built and shipped modular, production-grade applications using MERN and Next.js.",
+      "Led agile execution cycles to deliver mission-critical features on time while maintaining system scalability.",
     ],
   },
 ];
 
 const PROJECTS = [
   {
-    title: "Gamelore (Grimoire) | Full-Stack Developer",
+    title: "Grimoire | Personal Project",
     description:
-      "Built an AI-powered lore companion for games using a RAG pipeline: uploaded documents are chunked, embedded into Supabase pgvector, retrieved by similarity, and used with Groq to generate grounded answers. Implemented auth, admin ingest flows, and game-specific knowledge spaces.",
+      "Built a RAG-based AI chat system for game lore, narratives, and gameplay queries with a full pipeline for ingestion, chunking, embeddings, vector search, and grounded LLM response generation.",
     liveUrl: "https://gamelore.vercel.app",
     githubUrl: "https://github.com/sadat66/gamelore",
   },
   {
     title: "BuildReady | Full-Stack Developer",
-    description: "Architected a multi-tenant construction marketplace using a Three-Tier Monetization Model. Developed a Digital Tendering System with state machines and implemented a legally binding Digital Signature Engine with automated PDF generation.",
+    description:
+      "Developed a structured digital tendering system where homeowners can publish projects and contractors can submit paid proposals. Implemented a digital signature engine with hand-drawn signatures and automated PDF contracts for bilateral execution and archival.",
   },
   {
     title: "iLeap | Full-Stack Developer",
-    description: "Designed a multi-role RBAC ecosystem for Volunteers, Organizations, and Mentors. Engineered a high-performance filtering engine for opportunity matching and a messaging infrastructure supporting DMs and group coordination.",
+    description:
+      "Architected a multi-role RBAC system for Volunteers, Organizations, and Mentors. Built real-time 1:1 messaging and advanced filtering and discovery to improve opportunity matching.",
   },
 ];
 
 const SKILLS = [
   {
-    category: "Languages & Frameworks",
-    items: ["Typescript", "Next.js", "Node.js", "MongoDB", "PostgreSQL", "RESTful API", "Tailwind"],
+    category: "Languages",
+    items: ["TypeScript", "JavaScript"],
   },
   {
-    category: "Technologies & Infrastructure",
-    items: ["MySQL", "Postgres", "Vercel", "Git", "Supabase"],
+    category: "Frontend",
+    items: ["React", "Next.js", "Tailwind CSS"],
   },
   {
-    category: "Other & Engineering",
-    items: ["End to end development", "Requirement Engineering", "MVP Architecture", "Stakeholder Management"],
+    category: "Backend & Databases",
+    items: ["Node.js", "PostgreSQL", "MongoDB", "MySQL", "Redis", "Supabase", "Prisma ORM"],
+  },
+  {
+    category: "Tools & Strengths",
+    items: ["Git", "Vercel", "MVP Architecture", "Stakeholder Management", "Requirement Engineering"],
   },
 ];
 
@@ -88,7 +95,7 @@ export default function Home() {
               Sadat.
             </h1>
             <p className="m-0 max-w-[38rem] leading-relaxed text-[var(--muted)]">
-              I am a full-stack software engineer especially interested in building scalable digital products, and shipping fast MVPs that bridges the gap between the stakeholder requirements and high performance execution as well as maintaining a QA centric approach.
+              I am a Software Engineer experienced in bridging stakeholder requirements with engineering execution, leading client communication, and delivering high-impact features end-to-end. I focus on building reliable, scalable systems with strong real-world usability and performance.
             </p>
             <div className="mt-6 flex gap-4">
               <a href="https://github.com/sadat66" target="_blank" rel="noopener noreferrer" className="text-[var(--muted)] hover:text-[var(--accent)] transition-colors">
@@ -209,14 +216,26 @@ export default function Home() {
             </div>
             <div className="text-left md:text-right">
               <span className="rounded-full border border-[var(--accent)]/20 bg-[var(--accent-soft)]/60 px-3 py-1 text-xs uppercase tracking-[0.08em] text-[var(--muted)]">
-                Graduated: 2022
+                2017 – 2022
               </span>
             </div>
           </div>
           <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4">
             <div>
               <p className="text-xs font-bold uppercase text-[var(--accent)] mb-1">Interests</p>
-              <p className="text-sm text-[var(--muted)]">LLMs, RAGs, PC Hardware</p>
+              <p className="text-sm text-[var(--muted)]">LLM applications, RAG architecture, specialized AI systems</p>
+            </div>
+            <div>
+              <p className="text-xs font-bold uppercase text-[var(--accent)] mb-1">Website</p>
+              <a
+                href="https://imteazsadat.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-sm text-[var(--muted)] hover:text-[var(--accent)] transition-colors"
+              >
+                <span>imteazsadat.com</span>
+                <ArrowUpRight size={12} />
+              </a>
             </div>
             <div>
               <p className="text-xs font-bold uppercase text-[var(--accent)] mb-1">Playlist</p>
@@ -258,7 +277,7 @@ export default function Home() {
               </div>
             </div>
             <p className="mt-12 text-[10px] uppercase tracking-widest text-[var(--muted)] opacity-50">
-              © 2026 Dhaka, Bangladesh
+              © 2026 Imteaz Sadat
             </p>
           </div>
         </footer>
