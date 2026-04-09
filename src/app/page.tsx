@@ -226,18 +226,6 @@ export default function Home() {
               <p className="text-sm text-[var(--muted)]">LLM applications, RAG architecture, specialized AI systems</p>
             </div>
             <div>
-              <p className="text-xs font-bold uppercase text-[var(--accent)] mb-1">Website</p>
-              <a
-                href="https://imteazsadat.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-sm text-[var(--muted)] hover:text-[var(--accent)] transition-colors"
-              >
-                <span>imteazsadat.com</span>
-                <ArrowUpRight size={12} />
-              </a>
-            </div>
-            <div>
               <p className="text-xs font-bold uppercase text-[var(--accent)] mb-1">Playlist</p>
               <a 
                 href="https://music.youtube.com/playlist?list=PLPDuaJTLxFK7p-P2wMaw_RrDh9v4Ql58F&si=vuAhownij6rKVOn2" 
