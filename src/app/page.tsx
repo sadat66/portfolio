@@ -251,6 +251,9 @@ export default function Home() {
               Let&apos;s create something{" "}
               <span className="text-[var(--accent)]">permanent.</span>
             </h2>
+            <p className="mx-auto mt-4 max-w-[42rem] text-sm leading-relaxed text-[var(--muted)]">
+              Need a personalized RAG-based chat system for your product or domain? I can help design and build it end-to-end.
+            </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-6 text-sm sm:flex-row sm:gap-10">
               <a href="mailto:imteazsadat3@gmail.com" className="text-[var(--muted)] underline decoration-[var(--accent)]/40 decoration-1 underline-offset-4 transition-colors hover:text-[var(--foreground)] hover:decoration-[var(--accent)]">
                 imteazsadat3@gmail.com
