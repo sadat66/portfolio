@@ -16,6 +16,13 @@ const EXPERIENCE = [
 
 const PROJECTS = [
   {
+    title: "Gamelore (Grimoire) | Full-Stack Developer",
+    description:
+      "Built an AI-powered lore companion for games using a RAG pipeline: uploaded documents are chunked, embedded into Supabase pgvector, retrieved by similarity, and used with Groq to generate grounded answers. Implemented auth, admin ingest flows, and game-specific knowledge spaces.",
+    liveUrl: "https://gamelore.vercel.app",
+    githubUrl: "https://github.com/sadat66/gamelore",
+  },
+  {
     title: "BuildReady | Full-Stack Developer",
     description: "Architected a multi-tenant construction marketplace using a Three-Tier Monetization Model. Developed a Digital Tendering System with state machines and implemented a legally binding Digital Signature Engine with automated PDF generation.",
   },
@@ -145,6 +152,30 @@ export default function Home() {
                   <h3 className="text-base font-semibold mb-3">{project.title}</h3>
                   <p className="text-sm leading-relaxed text-[var(--muted)]">{project.description}</p>
                 </div>
+                {"liveUrl" in project && (
+                  <div className="mt-5 flex items-center gap-4 text-sm">
+                    {project.liveUrl && (
+                      <a
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 text-[var(--foreground)] hover:text-[var(--accent)] transition-colors"
+                      >
+                        Live Demo <ArrowUpRight size={14} />
+                      </a>
+                    )}
+                    {"githubUrl" in project && project.githubUrl && (
+                      <a
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 text-[var(--muted)] hover:text-[var(--accent)] transition-colors"
+                      >
+                        GitHub <ArrowUpRight size={14} />
+                      </a>
+                    )}
+                  </div>
+                )}
               </article>
             ))}
           </div>
