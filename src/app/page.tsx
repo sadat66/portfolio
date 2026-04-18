@@ -1,5 +1,12 @@
 import { ArrowUpRight, Github, Linkedin, Mail, Music } from "lucide-react";
 
+type Project = {
+  title: string;
+  description: string;
+  liveUrl?: string;
+  repoUrl?: string;
+};
+
 const EXPERIENCE = [
   {
     role: "Software Engineer",
@@ -15,13 +22,20 @@ const EXPERIENCE = [
   },
 ];
 
-const PROJECTS = [
+const PROJECTS: Project[] = [
   {
-    title: "Grimoire | Personal Project",
+    title: "DataTalk | Full-Stack Developer",
     description:
-      "Built a RAG-based AI chat system for game lore, narratives, and gameplay queries with a full pipeline for ingestion, chunking, embeddings, vector search, and grounded LLM response generation.",
+      "Architected a natural-language analytics prototype over a Northwind-style PostgreSQL database: authenticated streaming chat, LLM-generated SQL validated with deterministic parsing and allowlists before read-only execution, and a trust panel that explains what ran and why. Next.js 16, Supabase Auth, Tailwind.",
+    liveUrl: "https://datatalk-three.vercel.app/",
+    repoUrl: "https://github.com/sadat66/datatalk",
+  },
+  {
+    title: "Grimoire (Gamelore) | Full-Stack Developer",
+    description:
+      "Shipped a game lore Q&A app: users pick a game and chat with an LLM grounded in admin-uploaded docs. Built the full RAG path—extract and chunk PDFs/Word/JSON, embed into pgvector on Supabase, retrieve by similarity, answer with Groq—plus Auth, Storage, RLS, admin ingest, and client/server chat rate limits.",
     liveUrl: "https://gamelore.vercel.app",
-    githubUrl: "https://github.com/sadat66/gamelore",
+    repoUrl: "https://github.com/sadat66/gamelore",
   },
   {
     title: "BuildReady | Full-Stack Developer",
@@ -37,20 +51,31 @@ const PROJECTS = [
 
 const SKILLS = [
   {
-    category: "Languages",
-    items: ["TypeScript", "JavaScript"],
+    category: "Languages & frameworks",
+    items: ["TypeScript", "JavaScript", "Next.js", "Node.js", "React", "REST APIs", "Tailwind CSS"],
   },
   {
-    category: "Frontend",
-    items: ["React", "Next.js", "Tailwind CSS"],
+    category: "AI & LLM",
+    items: [
+      "LLM integration (OpenAI, OpenRouter)",
+      "RAG & retrieval patterns",
+      "NL-to-SQL & analytics copilots",
+      "Streaming AI responses (SSE)",
+      "Guardrails & validation for model output",
+    ],
   },
   {
-    category: "Backend & Databases",
-    items: ["Node.js", "PostgreSQL", "MongoDB", "MySQL", "Redis", "Supabase", "Prisma ORM"],
+    category: "Data & infrastructure",
+    items: ["PostgreSQL", "MongoDB", "MySQL", "Redis", "Supabase", "Prisma ORM", "Vercel", "Git"],
   },
   {
-    category: "Tools & Strengths",
-    items: ["Git", "Vercel", "MVP Architecture", "Stakeholder Management", "Requirement Engineering"],
+    category: "Product & engineering",
+    items: [
+      "End-to-end delivery",
+      "Requirements & stakeholder alignment",
+      "MVP architecture",
+      "QA-minded shipping",
+    ],
   },
 ];
 
@@ -158,31 +183,33 @@ export default function Home() {
                 <div>
                   <h3 className="text-base font-semibold mb-3">{project.title}</h3>
                   <p className="text-sm leading-relaxed text-[var(--muted)]">{project.description}</p>
+                  {(project.liveUrl || project.repoUrl) ? (
+                    <div className="mt-4 flex flex-wrap gap-x-4 gap-y-2 text-xs font-medium">
+                      {project.liveUrl ? (
+                        <a
+                          href={project.liveUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1 text-[var(--accent)] transition-colors hover:text-[var(--foreground)]"
+                        >
+                          Live demo
+                          <ArrowUpRight size={12} />
+                        </a>
+                      ) : null}
+                      {project.repoUrl ? (
+                        <a
+                          href={project.repoUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1 text-[var(--muted)] transition-colors hover:text-[var(--foreground)]"
+                        >
+                          <Github size={12} />
+                          Source
+                        </a>
+                      ) : null}
+                    </div>
+                  ) : null}
                 </div>
-                {"liveUrl" in project && (
-                  <div className="mt-5 flex items-center gap-4 text-sm">
-                    {project.liveUrl && (
-                      <a
-                        href={project.liveUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 text-[var(--foreground)] hover:text-[var(--accent)] transition-colors"
-                      >
-                        Live Demo <ArrowUpRight size={14} />
-                      </a>
-                    )}
-                    {"githubUrl" in project && project.githubUrl && (
-                      <a
-                        href={project.githubUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 text-[var(--muted)] hover:text-[var(--accent)] transition-colors"
-                      >
-                        GitHub <ArrowUpRight size={14} />
-                      </a>
-                    )}
-                  </div>
-                )}
               </article>
             ))}
           </div>
