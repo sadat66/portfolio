@@ -282,9 +282,12 @@ export default function Home() {
               Need a personalized RAG-based chat system for your product or domain? I can help design and build it end-to-end.
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-6 text-sm sm:flex-row sm:gap-10">
-              <a href="mailto:imteazsadat3@gmail.com" className="text-[var(--muted)] underline decoration-[var(--accent)]/40 decoration-1 underline-offset-4 transition-colors hover:text-[var(--foreground)] hover:decoration-[var(--accent)]">
-                imteazsadat3@gmail.com
-              </a>
+              <div className="flex flex-col items-center gap-2">
+                <a href="mailto:imteazsadat3@gmail.com" className="text-[var(--muted)] underline decoration-[var(--accent)]/40 decoration-1 underline-offset-4 transition-colors hover:text-[var(--foreground)] hover:decoration-[var(--accent)]">
+                  imteazsadat3@gmail.com
+                </a>
+                <p className="m-0 text-[var(--muted)]">01796633641 · 01540142451</p>
+              </div>
               <div className="flex gap-6">
                 <a href="https://linkedin.com/in/isadat" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 font-medium text-[var(--foreground)] transition-colors hover:text-[var(--accent)]">
                   LinkedIn <ArrowUpRight size={14} className="text-[var(--accent)]" />
